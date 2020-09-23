@@ -7,8 +7,8 @@ for(var i=1;i<60;i++)
 }
 function clock()
 {
-    var weekday=new Array(7);
-    var d=new Date(),
+    const weekday=new Array(7);
+    const d=new Date(),
     h=d.getHours(),
     m=d.getMinutes(),
     s=d.getSeconds(),
@@ -17,7 +17,7 @@ function clock()
     year=d.getFullYear(),
 
     hDeg=h * 30 + m * (360/720),
-    mDeg=m * 30 + s * (360/720),
+    mDeg=(m * 30 + s * (360/720))/5,
     sDeg= s * 6,
 
     hE=document.querySelector('.hour-hand'),
